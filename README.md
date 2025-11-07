@@ -1,47 +1,72 @@
-# Google-Translator
-This Python script utilizes the googletrans library to allow users to translate text into various languages interactively. The script provides a user-friendly interface for language selection and translation with the following features:
+# **Google Translator – Python**
 
-#### Key Features:
-
-1. **Language Selection:**
-   - The script defines a dictionary `language` containing language codes and their corresponding language names (e.g., "en" for English, "fr" for French).
-   - Users can type "options" to view the list of available language codes.
-   - Users input their desired language code, which is validated against the dictionary to ensure it's a valid option.
-
-2. **Interactive Translation Loop:**
-   - Once a valid language code is selected by the user, the script enters an interactive loop.
-   - Users can input text they want to translate, and the text is translated into the previously selected language.
-   - If users input "close", the program exits the loop and terminates.
-
-3. **Asynchronous Translation:**
-   - The translation feature is implemented using asynchronous functions to improve efficiency and handle potential delays in translation services.
-   - The function `translate_text` performs the translation asynchronously using the `googletrans` Translator object.
-   - The `asyncio` library is used to manage asynchronous operations and ensure the event loop is properly created and executed.
-
-#### Code Structure:
-
-- **Language Dictionary:**
-  - A dictionary named `language` contains language codes as keys and corresponding language names as values.
-
-- **Language Code Selection:**
-  - The script asks users for their desired language code.
-  - If the input is "options", the script prints out all available language codes and their corresponding languages.
-  - If a valid language code is entered, it is selected for translation.
-
-- **Translation Loop:**
-  - The script repeatedly prompts users to enter the text they want to translate.
-  - If "close" is entered, the script prints a goodbye message and exits the loop.
-  - The translation is performed asynchronously using the `translate_text` function, which translates the text using `googletrans` and prints the translated text, pronunciation, and source language.
-
-- **Asynchronous Handling:**
-  - The code uses `asyncio.run(main())` to run the main coroutine, which handles the translation loop and ensures proper creation and management of the event loop.
-
-#### Error Handling:
-
-- The script includes a try-except block within the `translate_text` function to handle potential errors during translation, ensuring that users are informed if any issues occur.
-
-Overall, this script provides an easy-to-use command-line interface for text translation, leveraging the capabilities of the `googletrans` library and the `asyncio` module for efficient and responsive translations.
+## **Overview**
+This Python script provides an interactive command-line interface for translating text into multiple languages using the **googletrans** library. It supports asynchronous translation for better performance and responsiveness.
 
 ---
 
-This description provides a detailed overview of the script's functionality, structure, and key features.
+## **Features**
+✔ Interactive language selection  
+✔ Translate text into multiple languages  
+✔ View pronunciation and source language  
+✔ Asynchronous translation for efficiency  
+
+---
+
+## **Requirements**
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+`requirements.txt`:
+```
+googletrans==4.0.0-rc1
+asyncio
+```
+
+---
+
+## **Usage**
+1. Run the script:
+```bash
+python src/Google_Translator.py
+```
+2. Enter a language code or type `options` to view available languages.
+3. Enter text to translate.
+4. Type `close` to exit.
+
+---
+
+## **Example Output**
+```
+Please input desired language code. To see the language code list, enter 'options':
+options
+Code : Language
+en => English
+fr => French
+es => Spanish
+...
+You have selected French
+
+Write the text you want to translate:
+Hello World
+
+French translation: Bonjour le monde
+Pronunciation: Bonjour le monde
+Translated from: English
+```
+
+---
+
+## **License**
+MIT License – Free to use and modify.
+
+---
+
+## **Author**
+**Yeshwant Hada**  
+https://github.com/YeshwantHada
+---
+
+👉 Shall I **generate the PDF for this README now** and then create the other files?
