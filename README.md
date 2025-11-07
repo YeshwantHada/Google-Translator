@@ -67,6 +67,3 @@ MIT License – Free to use and modify.
 ## **Author**
 **Yeshwant Hada**  
 https://github.com/YeshwantHada
----
-
-👉 Shall I **generate the PDF for this README now** and then create the other files?
